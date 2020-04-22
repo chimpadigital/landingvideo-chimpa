@@ -950,7 +950,7 @@ input:focus,textarea:focus,form-control:focus{
  * 3.2 Sticky Menu
  */
 #section-navbar1.sticky-menu, #section-navbar2.sticky-menu{
-	background: #0d0f16;
+	background: rgba(13, 15, 22, 0.3);
 	-webkit-transition:all 0.3s ease;
     transition:all 0.3s ease;
 }
@@ -5144,7 +5144,7 @@ text-align: center;
     padding: 18px 15px;
     width: 100%;
     max-width: 171px;
-    border-radius: 3px;
+    border-radius: 0px;
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -6400,6 +6400,9 @@ text-align: center;
 	}
 	#section-homepage5 #section-6 .contact-form input, #section-homepage5 #section-6 .contact-form textarea {
 	    padding: 20px 20px;
+	}
+	#section-homepage5 #section-6 .contact-form select {
+	    padding: 9px 20px;
 	}
 	#section-homepage5 #section-6 .contact-details {
 	    padding: 0 15px;
