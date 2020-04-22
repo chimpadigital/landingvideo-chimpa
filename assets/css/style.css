@@ -4664,7 +4664,7 @@ text-align: center;
  * 4.33.1 SECTION 1
  */
 #section-homepage5 #section-1{
-	background-image: url(../images/img-homepage5-bg1.jpg);
+	/* background-image: url(../images/img-homepage5-bg1.jpg); */
 	background-size: cover;
 	background-position: center, center;
 	background-repeat: no-repeat;
