@@ -66,7 +66,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST') {
           
                 $name = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
                 $email = isset($email) ? "Email: $email<br><br>" : '';
-                $phone = isset($phone) ? "Teléfono $phone<br><br>" : '';
+                $phone = isset($phone) ? "Teléfono: $phone<br><br>" : '';
                 $webs = isset($webs) ? "Tipo de web consulta: $webs<br><br>" : '';
                 // $service = isset($service) ? "Service: $service<br><br>" : '';
                 $message = isset($message) ? "Message: $message<br><br>" : '';
