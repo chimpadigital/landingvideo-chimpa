@@ -28,7 +28,7 @@ $message = isset($_POST["message"]) ? $_POST["message"] : null;
 // $recaptcha = $_POST['g-recaptcha-response'];
 
 //inicio script grabar datos en csv
-$fichero = 'landing video.csv';//nombre archivo ya creado
+$fichero = 'landing video sofia.csv';//nombre archivo ya creado
 //crear linea de datos separado por coma
 $fecha=date("Y-m-d H:i:s");
 $linea = $fecha.";".$name.";".$email.";".$phone.";".$webs.";".$message."\n";
