@@ -21,7 +21,7 @@ $email = isset($_POST["email-form"]) ? $_POST["email-form"] : null;
 $phone = isset($_POST["phone"]) ? $_POST["phone"] : null;
 $webs = isset($_POST["webs"]) ? $_POST["webs"] : null;
 // $service = isset($_POST["widget-contact-form-service"]) ? $_POST["widget-contact-form-service"] : null;
-$subject = 'Consulta landing video';
+$subject = 'Consulta landing video Awords';
 $subject_user = '¿Por qué es crucial tener una página web hoy?';
 $message = isset($_POST["message"]) ? $_POST["message"] : null;
 
