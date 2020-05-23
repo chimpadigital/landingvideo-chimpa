@@ -147,7 +147,7 @@ body{
 
 p {
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 30px;
     color: #878787;
@@ -2332,62 +2332,64 @@ text-align: center;
 /*==============================
  * 4.13. SECTION TESTIMONIAL 2 *
  *=============================*/
-#section-testimonial2{
+#section-testimonial2 .fp-tableCell{
 	padding: 120px 0;
-	background: #0d0f16;
+	background-image: url(../images/testimonio-bg.jpg);
+	background-size: cover;
+	background-position: center, center;
+	background-repeat: no-repeat;
 }
 
-#section-testimonial2 .item{
-	padding: 60px 50px 80px;
-	background: #12141c;
-	
+#section-testimonial2 .fp-tableCell .item {
+    padding: 42px 33px 48px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
-#section-testimonial2 .item p{
-	font-family: 'SourceSansPro-Light';
-	font-size: 20px;
-	color: #aaaaaa;
-	line-height: 32px;
-	margin-bottom: 49px;
+#section-testimonial2 .fp-tableCell .item p{
+	font-family: 'Montserrat';
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 32px;
+    margin-bottom: 49px;
 }
-#section-testimonial2 .image {
+#section-testimonial2 .fp-tableCell .image {
     display: inline-block;
-    border: 3px solid #d0bb79;
+    border: 5px solid rgba(255, 255, 255, 0.4);
     border-radius: 100%;
     margin-bottom: 28px;
     float: left;
 }
-#section-testimonial2 .client{
+#section-testimonial2 .fp-tableCell .client{
 	display: inline-block;
 	margin-left: 30px;
     margin-top: 10px;
 }
-#section-testimonial2 .client h6{
-	font-family: 'Quicksand-Bold';
+#section-testimonial2 .fp-tableCell .client h6{
+	font-family: 'Montserrat';
 	font-size: 18px;
 	color: #ffffff;
 	margin-bottom: 0px;
 	letter-spacing: 0.2px;
 }
-#section-testimonial2 .client p{
-	font-family: 'SourceSansPro-Regular';
+#section-testimonial2 .fp-tableCell .client p{
+	font-family: 'Montserrat';
     font-size: 16px;
-    color: #878787;
+    color: #B7E6C5;
     margin-bottom: 0;
     line-height: 22px;
 }
-#section-testimonial2 .owl-theme .owl-dots .owl-dot.active span, 
-#section-testimonial2 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #d0bb79;
+#section-testimonial2 .fp-tableCell .owl-theme .owl-dots .owl-dot.active span, 
+#section-testimonial2 .fp-tableCell .owl-theme .owl-dots .owl-dot:hover span {
+    background: #F3EE00;
 }
-#section-testimonial2 .owl-theme .owl-dots .owl-dot span {
+#section-testimonial2 .fp-tableCell .owl-theme .owl-dots .owl-dot span {
     width: 12px;
     height: 12px;
-    background: #20232e;
-    border-radius: 2px;
+    background: #ffffff;
+    border-radius: 0px;
 }
-#section-testimonial2 .owl-theme .owl-nav.disabled+.owl-dots {
-    margin-top: 75px;
+#section-testimonial2 .fp-tableCell .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 23px;
     line-height: 0;
 }
 
@@ -2396,7 +2398,7 @@ text-align: center;
 }
 
 #section-testimonial2.v3{
-	padding: 120px 0;
+	padding: 70px 0;
 }
 
 /*==============================
@@ -4727,10 +4729,17 @@ text-align: center;
 	background-size: cover;
 }
 
+
 .linea-azul{
 	width: 100px;
 	height: 14px;
 	background-color: #3FA1CC;
+	margin-bottom: 25px;
+}
+.linea-amarilla{
+	width: 100%;
+	height: 2px;
+	background-color: #F3EE00;
 	margin-bottom: 25px;
 }
 
@@ -4770,7 +4779,7 @@ text-align: center;
 
 #section-homepage5 #section-2 .left h2{
 	font-family: 'Montserrat';
-	font-weight: 400;
+	font-weight: 600;
 	color: #3FA1CC;
 	font-size: 56px;
 	line-height: 49px;
@@ -4958,7 +4967,7 @@ text-align: center;
  * 4.33.5 SECTION 5
  */
 #section-homepage5 #section-5{
-	background-image: url(../images/img-homepage5-7.jpg);
+	background-image: url(../images/testimonio-bg.jpg);
 	background-size: cover;
 	background-position: center, center;
 	background-repeat: no-repeat;
@@ -5069,7 +5078,7 @@ text-align: center;
  * Contact FORM
  */
 #section-homepage5 #section-6 .contact-form .form-group {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 #section-homepage5 #section-6 .contact-form .row:last-of-type .form-group {
     margin-bottom: 0px;
@@ -5119,22 +5128,26 @@ text-align: center;
 #section-homepage5 #section-6 .contact-form ::-webkit-input-placeholder {
 	font-family: 'Montserrat';
 	font-size: 18px; 
-    color: #ffffff;
+	color: #ffffff;
+	font-weight: 300;
 }
 #section-homepage5 #section-6 .contact-form ::-moz-placeholder {
 	font-family: 'Montserrat';
 	font-size: 18px;
-    color: #ffffff;
+	color: #ffffff;
+	font-weight: 300;
 }
 #section-homepage5 #section-6 .contact-form :-ms-input-placeholder {
 	font-family: 'Montserrat';
 	font-size: 18px;
-    color: #ffffff;
+	color: #ffffff;
+	font-weight: 300;
 }
 #section-homepage5 #section-6 .contact-form :-moz-placeholder {
 	font-family: 'Montserrat';
 	font-size: 18px; 
-    color: #ffffff;
+	color: #ffffff;
+	font-weight: 300;
 }#section-homepage5 #section-6 .contact-form button{
     font-family: 'Montserrat';
     font-size: 19px;
@@ -5290,6 +5303,9 @@ text-align: center;
 	height: 33px;
 }
 
+.caracteristicas-mobile{display: none;}
+
+
 /*============================
  *      06. RESPONSIVE       *
  *===========================*/
@@ -5311,9 +5327,9 @@ text-align: center;
 	}
 	.line-form{width: 100%;height: 5px; background: #ffffff;float: left;    margin-bottom: 50px;}
 	#section-cta2 .left h2 {
-		font-size: 34px;
+		font-size: 24px;
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom:25px;
 	}
 
 	#section-homepage5 #section-2 .left h2 {
@@ -5727,13 +5743,13 @@ text-align: center;
 	    padding: 18px 60px;
 	}
 	#section-cta2 {
-	    padding: 60px 0 90px;
+	    padding:25px 0 25px;
 	}
 	#section-slider1 .swiper-slide.video-slider .video-play {
 	    left: 0;
 	}
 	#section-testimonial2 {
-	    padding: 60px 0 60px;
+	    padding: 0px 0 0px;
 	}
 	#section-latestblog1 {
 	    padding: 60px 0;
@@ -5964,6 +5980,9 @@ text-align: center;
 }
 
 @media only screen and ( min-width: 768px ){
+
+	
+	
 	#section-slider1 .slider-content {
 	    max-width: 720px;
 	}
@@ -6027,6 +6046,47 @@ text-align: center;
 }
 
 @media only screen and ( max-width: 767px ) {
+
+	.btn-5, .btn-5:focus {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 15px;
+		color: #ffffff;
+		background: #3fa1cc;
+		border: 2px solid #3fa1cc;
+		border-radius: 3px;
+		padding: 14px 32px;
+		line-height: 40px;
+	}
+
+	#rev_slider_17_2_forcefullwidth{display: none;}
+
+	.caracteristicas{display: none;}
+	.caracteristicas-mobile{display: block;}
+
+	#section-homepage5 #section-2{
+		background: url(../images/bg-tipos-mobile.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	#section-homepage5 #section-3 {
+		background: url(../images/bg-web.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	#section-2 .fp-tableCell {
+		text-align: center;
+		vertical-align: top;
+	}
+	#section-3 .fp-tableCell {
+		vertical-align: bottom;
+		padding-bottom: 0vh;
+	}
+	.linea-azul {
+		height: 8px;
+		margin-bottom: 25px;
+		margin: 20px auto;
+	}
 	#section-slider1 .slider-content h1 {
 	    font-size: 28px;
 	    line-height: 35px;
@@ -6297,7 +6357,7 @@ text-align: center;
 	    padding: 15px 0 15px;
 	}
 	#section-homepage5 #section-2{
-		padding: 60px 0;
+		padding: 60px 0 130px;
 	}
 
 	#section-homepage5 #section-2 .left {
@@ -6307,7 +6367,7 @@ text-align: center;
 	    font-size: 11px;
 	}
 	#section-homepage5 #section-2 .left h1 {
-	    font-size: 22px;
+	    font-size: 26px;
 	    line-height: 30px;
 	    margin-bottom: 12px;
 	}
@@ -6372,7 +6432,7 @@ text-align: center;
 	    margin: 7px 7px 15px;
 	}
 	#section-homepage5 #section-4{
-		padding: 60px 0;
+		padding: 0px 0;
 	}
 	#section-homepage5 #section-4 .item {
 		left: 0;
@@ -6401,7 +6461,7 @@ text-align: center;
     	left: 15px;
     }
 	#section-homepage5 #section-6{
-		padding: 60px 0;
+		padding: 45px 27px;
 	}
 	#section-homepage5 #section-6 .contact-form{
 		margin-bottom: 30px;
@@ -6478,7 +6538,7 @@ text-align: center;
 		text-align: center;
 	}
 	.title3 h2 {
-		font-size: 28px;
+		font-size: 25px;
 		text-align: center;
 		margin-bottom: 10px!important;
 	}
@@ -6762,13 +6822,23 @@ text-align: center;
 	}
 }
 @media only screen and ( min-width: 992px ){
+	.owl-carousel {
+		width: 85%!important;
+	}
+	#section-testimonial2 .fp-tableCell {
+		padding: 120px 0;
+		background-image: url(../images/carac-4.jpg);
+	}
 	#section-slider1 .slider-content {
 	    max-width: 960px;
 	}
 }
-@media only screen and ( min-width: 1200px ){
+@media only screen and ( min-width: 1366px ){
 	#section-slider1 .slider-content {
 	    max-width: 1170px;
-
+	}
+	#section-testimonial2 .fp-tableCell {
+		padding: 60px 0;
+		background-image: url(../images/carac-4.jpg);
 	}
 }
