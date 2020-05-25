@@ -6052,6 +6052,7 @@ text-align: center;
 }
 
 @media only screen and ( max-width: 767px ) {
+	#section-preloader{display: none;}
 
 	.btn-5, .btn-5:focus {
 		font-family: 'Montserrat';
