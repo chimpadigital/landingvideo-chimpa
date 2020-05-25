@@ -4666,7 +4666,7 @@ text-align: center;
  * 4.33.1 SECTION 1
  */
 #section-homepage5 #section-1{
-	/* background-image: url(../images/img-homepage5-bg1.jpg); */
+	background-image: url(../images/bg-provisional.jpg);
 	background-size: cover;
 	background-position: center, center;
 	background-repeat: no-repeat;
@@ -4734,6 +4734,12 @@ text-align: center;
 	width: 100px;
 	height: 14px;
 	background-color: #3FA1CC;
+	margin-bottom: 25px;
+}
+.linea-blanca{
+	width: 100px;
+	height: 5px;
+	background-color: #fff;
 	margin-bottom: 25px;
 }
 .linea-amarilla{
@@ -5305,7 +5311,7 @@ text-align: center;
 
 .caracteristicas-mobile{display: none;}
 
-
+.text-amarillo{color:#F3EE00!important}
 /*============================
  *      06. RESPONSIVE       *
  *===========================*/
@@ -6060,6 +6066,7 @@ text-align: center;
 	}
 
 	#rev_slider_17_2_forcefullwidth{display: none;}
+	#rev_slider_17_1_forcefullwidth{display: none;}
 
 	.caracteristicas{display: none;}
 	.caracteristicas-mobile{display: block;}
