@@ -13,7 +13,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
-$to = "contacto@chimpancedigital.com.ar";
+$to = "sprados@chimpancedigital.com.ar";
 
 // Form Fields
 $name = isset($_POST["name"]) ? $_POST["name"] : null;
