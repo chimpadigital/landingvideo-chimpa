@@ -624,7 +624,7 @@ input:focus,textarea:focus,form-control:focus{
 
 #section-preloader .blobs .blob-center {
 	position: absolute;
-	background: #d0bb79;
+	background: #ED1E7B;
 	top: 50%;
 	left: 50%;
 	width: 30px;
@@ -636,12 +636,12 @@ input:focus,textarea:focus,form-control:focus{
 	-webkit-animation: blob-grow linear 3.4s infinite;
 	animation: blob-grow linear 3.4s infinite;
 	border-radius: 50%;
-	box-shadow: 0 -10px 40px -5px #d0bb79;
+	box-shadow: 0 -10px 40px -5px rgb(177, 21, 91);
 }
 
 #section-preloader .blob {
 	position: absolute;
-	background: #d0bb79;
+	background: #ED1E7B;
 	top: 50%;
 	left: 50%;
 	width: 30px;
