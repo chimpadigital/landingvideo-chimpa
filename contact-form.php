@@ -143,7 +143,7 @@ function enviarMail($to,$asunto,$cuerpo){
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
         $mail->Username = "sprados@chimpancedigital.com.ar";
-        $mail->Password = "Chimpance951#$";   
+        $mail->Password = "35966301Sa$";   
         // Send using SMTP
         
         //Recipients
