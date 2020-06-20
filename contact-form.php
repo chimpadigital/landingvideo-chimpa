@@ -13,8 +13,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
-$to = "sprados@chimpancedigital.com.ar";
-$to2 = "ricardo@chimpancedigital.com.ar";
+$to = "sprados@chimpancedigital.com.ar,ricardo@chimpancedigital.com.ar";
 
 // Form Fields
 $name = isset($_POST["name"]) ? $_POST["name"] : null;
@@ -126,12 +125,11 @@ $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom
 </div>
         ';
 $to1=$to;
-$tocc=$to2;
 $to2=$_POST["email-form"];
 $asunto1=$subject;
 $asunto2=$subject_user;
 
-function enviarMail($to,$tocc,$asunto,$cuerpo){
+function enviarMail($to,$asunto,$cuerpo){
     $mail = new PHPMailer(true);
     
     try {
@@ -150,7 +148,7 @@ function enviarMail($to,$tocc,$asunto,$cuerpo){
         
         //Recipients
         $mail->setFrom('contacto@chimpancedigital.com.ar', 'Chimpancé Digital');
-        $mail->addAddress($to, $tocc);               // Name is optional         
+        $mail->addAddress($to);               // Name is optional         
         
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
@@ -166,7 +164,7 @@ function enviarMail($to,$tocc,$asunto,$cuerpo){
 }
 if( $_SERVER['REQUEST_METHOD'] == 'POST') {
     //If you don't receive the email, enable and configure these parameters below: 
-    $mail_enviado=enviarMail($to1,$tocc,$asunto1,$cuerpo1);
+    $mail_enviado=enviarMail($to1,$asunto1,$cuerpo1);
     //echo 'envio 1 '.$mail_enviado;
     $mail_enviado2=enviarMail($to2,$asunto2,$cuerpo2);
     //echo 'envio 2 '.$mail_enviado2;
