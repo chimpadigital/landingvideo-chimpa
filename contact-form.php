@@ -131,7 +131,7 @@ $to2=$_POST["email-form"];
 $asunto1=$subject;
 $asunto2=$subject_user;
 
-function enviarMail($to,$asunto,$cuerpo){
+function enviarMail($to,$tocc,$asunto,$cuerpo){
     $mail = new PHPMailer(true);
     
     try {
