@@ -150,8 +150,7 @@ function enviarMail($to,$asunto,$cuerpo){
         
         //Recipients
         $mail->setFrom('contacto@chimpancedigital.com.ar', 'Chimpance Digital');
-        $mail->addAddress($to);               // Name is optional
-        $mail->addCC($tocc);               // Name is optional
+        $mail->addAddress($to, $tocc);               // Name is optional         
         
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
