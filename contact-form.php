@@ -151,6 +151,7 @@ function enviarMail($to,$asunto,$cuerpo){
         //Recipients
         $mail->setFrom('contacto@chimpancedigital.com.ar', 'Chimpance Digital');
         $mail->addAddress($to);               // Name is optional
+        $mail->addCC($tocc);               // Name is optional
         
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
@@ -166,7 +167,7 @@ function enviarMail($to,$asunto,$cuerpo){
 }
 if( $_SERVER['REQUEST_METHOD'] == 'POST') {
     //If you don't receive the email, enable and configure these parameters below: 
-    $mail_enviado=enviarMail($to1,$tocc,$asunto1,$cuerpo1);
+    $mail_enviado=enviarMail($to1,$asunto1,$cuerpo1);
     //echo 'envio 1 '.$mail_enviado;
     $mail_enviado2=enviarMail($to2,$asunto2,$cuerpo2);
     //echo 'envio 2 '.$mail_enviado2;
