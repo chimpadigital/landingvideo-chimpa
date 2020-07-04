@@ -5096,7 +5096,7 @@ text-align: center;
     border: 2px solid #ffffff !important;
     background: rgba(26, 114, 152, 0.6);
     border-radius: 0px;
-	padding: 28px 30px;
+	padding: 28px 20px;
 	letter-spacing: 0;
 }
 #section-homepage5 #section-6 .contact-form select{
@@ -5312,6 +5312,8 @@ text-align: center;
 .caracteristicas-mobile{display: none;}
 
 .text-amarillo{color:#F3EE00!important}
+
+.area{width: 80%;}
 /*============================
  *      06. RESPONSIVE       *
  *===========================*/

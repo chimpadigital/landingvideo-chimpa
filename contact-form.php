@@ -13,11 +13,12 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
-$to = "contacto@chimpancedigital.com.ar";
+$to = "sprados@chimpancedigital.com.ar";
 
 // Form Fields
 $name = isset($_POST["name"]) ? $_POST["name"] : null;
 $email = isset($_POST["email-form"]) ? $_POST["email-form"] : null;
+$area = isset($_POST["area"]) ? $_POST["area"] : null;
 $phone = isset($_POST["phone"]) ? $_POST["phone"] : null;
 $webs = isset($_POST["webs"]) ? $_POST["webs"] : null;
 $empresa = isset($_POST["empresa"]) ? $_POST["empresa"] : null;
@@ -32,7 +33,7 @@ $message = isset($_POST["message"]) ? $_POST["message"] : null;
 $fichero = 'landing video.csv';//nombre archivo ya creado
 //crear linea de datos separado por coma
 $fecha=date("Y-m-d H:i:s");
-$linea = $fecha.";".$name.";".$email.";".$phone.";".$empresa.";".$webs.";".$message."\n";
+$linea = $fecha.";".$name.";".$email.";".$area.";".$phone.";".$empresa.";".$webs.";".$message."\n";
 // Escribir la linea en el fichero
 file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
 //fin grabar datos
@@ -40,13 +41,13 @@ file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
 
 $name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
 $email2 = isset($email) ? "Email: $email<br><br>" : '';
-$phone = isset($phone) ? "Teléfono: $phone<br><br>" : '';
+$phone = isset($phone) ? "Teléfono: $area $phone<br><br>" : '';
 $empresa = isset($empresa) ? "Empresa: $empresa<br><br>" : '';
 $webs = isset($webs) ? "Tipo de web consulta: $webs<br><br>" : '';
 // $service = isset($service) ? "Service: $service<br><br>" : '';
 $message = isset($message) ? "Message: $message<br><br>" : '';
 
-$cuerpo1 = $name2 . $email2 . $phone . $empresa . $webs . $message . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
+$cuerpo1 = $name2 . $email2 . $area . $phone . $empresa . $webs . $message . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
 
 $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom:50px;width: 100%;">
 <table width="600px" align="center" cellpadding="0" cellspacing="0" style="background-color:white">
