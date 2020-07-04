@@ -47,7 +47,7 @@ $webs = isset($webs) ? "Tipo de web consulta: $webs<br><br>" : '';
 // $service = isset($service) ? "Service: $service<br><br>" : '';
 $message = isset($message) ? "Message: $message<br><br>" : '';
 
-$cuerpo1 = $name2 . $email2 . $area . $phone . $empresa . $webs . $message . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
+$cuerpo1 = $name2 . $email2 . $phone . $empresa . $webs . $message . '<br><br><br>Mensaje enviado de: ' . $_SERVER['HTTP_REFERER'];
 
 $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom:50px;width: 100%;">
 <table width="600px" align="center" cellpadding="0" cellspacing="0" style="background-color:white">
