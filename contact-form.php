@@ -127,7 +127,7 @@ $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom
 </div>
         ';
 $to1[]=$to;
-$to1[]='aolamas@gmail.com'; // aca cambia el que queres agregar
+$to1[]='sprados@chimpancedigital.com.ar'; // aca cambia el que queres agregar
 $to2[]=$_POST["email-form"];
 //
 //todos los TO que envias tienen que ser un array declarado como estan arriba, podes enviar un to solo que no sea array sin declararlo tambien. pero para enviar a dos o mas mail tienen que ser un array y vas sumando elementos despues el script se ocupa y agrega uno por cada elemento
