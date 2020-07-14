@@ -11,7 +11,8 @@ use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
 require 'vendor/autoload.php';
-
+$to1=array();
+$to2=array();
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
 $to = "contacto@chimpancedigital.com.ar";
 
@@ -125,8 +126,12 @@ $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom
 </table>
 </div>
         ';
-$to1=$to;
-$to2=$_POST["email-form"];
+$to1[]=$to;
+$to1[]='aolamas@gmail.com'; // aca cambia el que queres agregar
+$to2[]=$_POST["email-form"];
+//
+//todos los TO que envias tienen que ser un array declarado como estan arriba, podes enviar un to solo que no sea array sin declararlo tambien. pero para enviar a dos o mas mail tienen que ser un array y vas sumando elementos despues el script se ocupa y agrega uno por cada elemento
+
 $asunto1=$subject;
 $asunto2=$subject_user;
 
@@ -149,8 +154,14 @@ function enviarMail($to,$asunto,$cuerpo){
         
         //Recipients
         $mail->setFrom('contacto@chimpancedigital.com.ar', 'Chimpancé Digital');
-        $mail->addAddress($to);               // Name is optional         
-        
+    	if(is_array($to)){
+        	foreach($to as $correo){
+        		$mail->addAddress($correo); 	
+        	}
+        }else{
+        	$mail->addAddress($to); 	
+        }
+    	
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = $asunto;
