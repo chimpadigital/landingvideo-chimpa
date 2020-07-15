@@ -11,7 +11,8 @@ use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
 require 'vendor/autoload.php';
-
+$to1=array();
+$to2=array();
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
 $to = "contacto@chimpancedigital.com.ar";
 
@@ -23,7 +24,7 @@ $phone = isset($_POST["phone"]) ? $_POST["phone"] : null;
 $webs = isset($_POST["webs"]) ? $_POST["webs"] : null;
 $empresa = isset($_POST["empresa"]) ? $_POST["empresa"] : null;
 // $service = isset($_POST["widget-contact-form-service"]) ? $_POST["widget-contact-form-service"] : null;
-$subject = 'Consulta landing video';
+$subject = 'Consulta landing video sofi';
 $subject_user = '¿Por qué es crucial tener una página web hoy?';
 $message = isset($_POST["message"]) ? $_POST["message"] : null;
 
@@ -125,7 +126,8 @@ $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom
 </table>
 </div>
         ';
-$to1=$to;
+$to1[]=$to;
+$to1[]='ricardo@chimpancedigital.com.ar'; // aca cambia el que queres agregar
 $to2=$_POST["email-form"];
 $asunto1=$subject;
 $asunto2=$subject_user;
@@ -149,7 +151,13 @@ function enviarMail($to,$asunto,$cuerpo){
         
         //Recipients
         $mail->setFrom('contacto@chimpancedigital.com.ar', 'Chimpancé Digital');
-        $mail->addAddress($to);               // Name is optional         
+        if(is_array($to)){
+        	foreach($to as $correo){
+        		$mail->addAddress($correo); 	
+        	}
+        }else{
+        	$mail->addAddress($to); 	
+        }               // Name is optional          
         
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
