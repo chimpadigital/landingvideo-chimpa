@@ -19,7 +19,7 @@ $to = "contacto@chimpancedigital.com.ar";
 // Form Fields
 $name = isset($_POST["name"]) ? $_POST["name"] : null;
 $email = isset($_POST["email-form"]) ? $_POST["email-form"] : null;
-$area = isset($_POST["area"]) ? $_POST["area"] : null;
+// $area = isset($_POST["area"]) ? $_POST["area"] : null;
 $phone = isset($_POST["phone"]) ? $_POST["phone"] : null;
 $webs = isset($_POST["webs"]) ? $_POST["webs"] : null;
 $empresa = isset($_POST["empresa"]) ? $_POST["empresa"] : null;
@@ -42,7 +42,7 @@ file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
 
 $name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
 $email2 = isset($email) ? "Email: $email<br><br>" : '';
-$phone = isset($phone) ? "Teléfono: $area $phone<br><br>" : '';
+$phone = isset($phone) ? "Teléfono: $phone<br><br>" : '';
 $empresa = isset($empresa) ? "Empresa: $empresa<br><br>" : '';
 $webs = isset($webs) ? "Tipo de web consulta: $webs<br><br>" : '';
 // $service = isset($service) ? "Service: $service<br><br>" : '';
