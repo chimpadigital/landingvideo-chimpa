@@ -11,7 +11,6 @@ use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
 require 'vendor/autoload.php';
-
 $to1=array();
 $to2=array();
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
@@ -20,19 +19,19 @@ $to = "contacto@chimpancedigital.com.ar";
 // Form Fields
 $name = isset($_POST["name"]) ? $_POST["name"] : null;
 $email = isset($_POST["email-form"]) ? $_POST["email-form"] : null;
-$area = isset($_POST["area"]) ? $_POST["area"] : null;
+// $area = isset($_POST["area"]) ? $_POST["area"] : null;
 $phone = isset($_POST["phone"]) ? $_POST["phone"] : null;
 $webs = isset($_POST["webs"]) ? $_POST["webs"] : null;
 $empresa = isset($_POST["empresa"]) ? $_POST["empresa"] : null;
 // $service = isset($_POST["widget-contact-form-service"]) ? $_POST["widget-contact-form-service"] : null;
-$subject = 'Consulta landing video aw';
+$subject = 'Consulta landing video AW';
 $subject_user = '¿Por qué es crucial tener una página web hoy?';
 $message = isset($_POST["message"]) ? $_POST["message"] : null;
 
 // $recaptcha = $_POST['g-recaptcha-response'];
 
 //inicio script grabar datos en csv
-$fichero = 'landing video aw.csv';//nombre archivo ya creado
+$fichero = 'landing video.csv';//nombre archivo ya creado
 //crear linea de datos separado por coma
 $fecha=date("Y-m-d H:i:s");
 $linea = $fecha.";".$name.";".$email.";".$area.";".$phone.";".$empresa.";".$webs.";".$message."\n";
@@ -43,7 +42,7 @@ file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
 
 $name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
 $email2 = isset($email) ? "Email: $email<br><br>" : '';
-$phone = isset($phone) ? "Teléfono: $area $phone<br><br>" : '';
+$phone = isset($phone) ? "Whatsapp: $phone<br><br>" : '';
 $empresa = isset($empresa) ? "Empresa: $empresa<br><br>" : '';
 $webs = isset($webs) ? "Tipo de web consulta: $webs<br><br>" : '';
 // $service = isset($service) ? "Service: $service<br><br>" : '';
@@ -129,7 +128,10 @@ $cuerpo2='  <div style="background-color:#f9f9f9;padding-top:50px;padding-bottom
         ';
 $to1[]=$to;
 $to1[]='ricardo@chimpancedigital.com.ar'; // aca cambia el que queres agregar
-$to2=$_POST["email-form"];
+$to2[]=$_POST["email-form"];
+//
+//todos los TO que envias tienen que ser un array declarado como estan arriba, podes enviar un to solo que no sea array sin declararlo tambien. pero para enviar a dos o mas mail tienen que ser un array y vas sumando elementos despues el script se ocupa y agrega uno por cada elemento
+
 $asunto1=$subject;
 $asunto2=$subject_user;
 
@@ -152,14 +154,14 @@ function enviarMail($to,$asunto,$cuerpo){
         
         //Recipients
         $mail->setFrom('contacto@chimpancedigital.com.ar', 'Chimpancé Digital');
-        if(is_array($to)){
+    	if(is_array($to)){
         	foreach($to as $correo){
         		$mail->addAddress($correo); 	
         	}
         }else{
         	$mail->addAddress($to); 	
-        }               // Name is optional         
-        
+        }
+    	
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = $asunto;
