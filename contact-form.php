@@ -42,7 +42,7 @@ file_put_contents($fichero, $linea, FILE_APPEND | LOCK_EX);
 
 $name2 = isset($name) ? "Nombre y Apellido: $name<br><br>" : '';
 $email2 = isset($email) ? "Email: $email<br><br>" : '';
-$phone = isset($phone) ? "Teléfono: $phone<br><br>" : '';
+$phone = isset($phone) ? "Whatsapp: $phone<br><br>" : '';
 $empresa = isset($empresa) ? "Empresa: $empresa<br><br>" : '';
 $webs = isset($webs) ? "Tipo de web consulta: $webs<br><br>" : '';
 // $service = isset($service) ? "Service: $service<br><br>" : '';
