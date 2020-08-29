@@ -1,98 +1,3 @@
-/* ==============================================================
-
-Theme Name	: Akroot HTML
-Theme URI	: TexTheme
-Author		: TexTheme
-Author URI	: https://themeforest.net/user/textheme
-Description	: Responsive Portfolio Template
-Version		: 1.0.0
-
-=================================================================
-*                     ~TABLE OF CONTENTS~                       *
-=================================================================
-01. FONTS INSTALLER
-    1.1 Quick Sands
-    1.2 Source Sans Pro
-
-02. GENERAL
-	2.1 Social Links
-	2.3 Buttons
-		2.3.1 Button 1
-		2.3.2 Button 2
-		2.3.3 Button 3
-		2.3.4 Button 4
-		2.3.5 Button 5
-		2.3.6 Button 6
-	2.4 Margin & Padding & Space
-	2.5 Titles
-		2.5.1 Title1
-		2.5.2 Title2
-		2.5.3 Title3
-		2.5.4 Title4
-	2.6 Backgrounds
-		2.6.1 Background 1
-	2.7 Section Preloader
-
-03. SECTION HEADER
-	3.1 Navigation 1
-	3.2 Sticky Menu
-	3.2 Header Contact
-	3.5 Burger Menu
-	3.6 Search
-	3.7 Navigation Search
-	3.8 Search Form
-	3.9 Navigation 2
-
-04. SECTION CONTENTS
-	4.1 SECTION SLIDER
-		4.1.1 Slider 1
-	4.2.  SECTION ABOUTUS 1
-	4.3.  SECTION MISCELLANEOUS 1
-	4.4.  SECTION RECENT WORKS 1
-	4.5.  SECTION CTA 1
-	4.6.  SECTION TESTIMONIAL 1
-	4.7.  SECTION CONTACT FORM 1
-	4.8.  SECTION ABOUTUS 2
-	4.9.  SECTION OUR PORTFOLIO 1
-	4.10. SECTION VISION
-	4.11. SECTION CTA 2
-	4.12. SECTION CLIENTS 1
-	4.13. SECTION TESTIMONIAL 2
-	4.14. SECTION LATEST BLOG 1
-	4.15. SECTION OUR PORTFOLIO 2
-	4.16. SECTION BREADCRUMB 1
-	4.17. SECTION ALL STARTED
-	4.18. SECTION OUR TEAM 1
-	4.19. SECTION CTA 3
-	4.20. SECTION SERVICES 1
-	4.21. SECTION SERVICES 2
-	4.22. SECTION HOW WE WORK
-	4.23. SECTION PRICING 1
-	4.24. SECTION SUBSCRIBE 1
-	4.25. SECTION OUR PORTFOLIO 3
-	4.26. SECTION PORTFOLIO DETAILS 1
-	4.27. SECTION NEWS 1
-	4.28. SECTION NEWS 2
-	4.29. SECTION NEWS DETAILS 1
-	4.30. SECTION CONTACT
-	4.31. SECTION PAGE NOT FOUND 404
-	4.32. SECTION COMING SOON
-	4.33. SECTION HOMEPAGE 5
-		  4.33.1 SECTION 1
-		  4.33.2 SECTION 2
-		  4.33.3 SECTION 3
-		  4.33.4 SECTION 4
-		  4.33.5 SECTION 5
-		  4.33.6 SECTION 6
-
-05. SECTION FOOTER
-
-06. RESPONSIVE
-	6.1 Max Height
-	6.2 Max Width
-	6.3 Custom Slider Content Width
-
-*/
 /*============================
  *    01. FONTS INSTALLER    *
  *===========================*/
@@ -100,39 +5,7 @@ Version		: 1.0.0
  * 1.1 Quicksands
  */
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
-/* @font-face {
-    font-family: 'Quicksand-Regular';
-    src: url('../fonts/quicksand/Quicksand-Regular.eot');
-    src: url('../fonts/quicksand/Quicksand-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/quicksand/Quicksand-Regular.woff2') format('woff2'),
-         url('../fonts/quicksand/Quicksand-Regular.woff') format('woff'),
-         url('../fonts/quicksand/Quicksand-Regular.ttf') format('truetype'),
-         url('../fonts/quicksand/Quicksand-Regular.svg#Quicksand-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Quicksand-Bold';
-    src: url('../fonts/quicksand/Quicksand-Bold.eot');
-    src: url('../fonts/quicksand/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/quicksand/Quicksand-Bold.woff2') format('woff2'),
-         url('../fonts/quicksand/Quicksand-Bold.woff') format('woff'),
-         url('../fonts/quicksand/Quicksand-Bold.ttf') format('truetype'),
-         url('../fonts/quicksand/Quicksand-Bold.svg#Quicksand-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Quicksand-Light';
-    src: url('../fonts/quicksand/Quicksand-Light.eot');
-    src: url('../fonts/quicksand/Quicksand-Light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/quicksand/Quicksand-Light.woff2') format('woff2'),
-         url('../fonts/quicksand/Quicksand-Light.woff') format('woff'),
-         url('../fonts/quicksand/Quicksand-Light.ttf') format('truetype'),
-         url('../fonts/quicksand/Quicksand-Light.svg#Quicksand-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-} */
+
 
 /*============================
  *        02. GENERAL        *
@@ -152,6 +25,38 @@ p {
     line-height: 30px;
     color: #878787;
 }
+/***************************
+COOKIE BOX
+***************************/
+#cookie_box
+{ 
+    position: fixed;
+    display: none;
+    bottom: 0px;
+    font-size: 1em;
+    z-index: 1000;
+    background: rgb(247 247 247 / .8);
+    padding: 16px 15px;
+    text-align: center;
+    width: 100%;
+    color: #313131;
+}
+#cookie_box a
+{ 
+	color:#F3EE00;
+	text-decoration: underline;
+	font-weight: 600;
+}
+#cookie_box a:hover
+{ 
+	color:#ffffff;
+	text-decoration: underline
+}
+.cookie_box_close{background-color: #F3EE00;
+    color: #3fa1cc!important;
+    text-decoration: none!important;
+    padding: 10px;margin-left: 10px;}
+
 
 a,
 a:hover,
@@ -5096,7 +5001,7 @@ text-align: center;
     border: 2px solid #ffffff !important;
     background: rgba(26, 114, 152, 0.6);
     border-radius: 0px;
-	padding: 28px 30px;
+	padding: 28px 20px;
 	letter-spacing: 0;
 }
 #section-homepage5 #section-6 .contact-form select{
@@ -5118,7 +5023,7 @@ text-align: center;
 }
 #section-homepage5 #section-6 .contact-form textarea {
 	padding: 21px 30px;
-	height: 220px;
+	height: 190px;
 }
 #section-homepage5 #section-6 .contact-form input:focus, #section-homepage5 #section-6 .contact-form textarea:focus{
 	border: 2px solid #f3ee00 !important;
@@ -5156,11 +5061,11 @@ text-align: center;
 	font-weight: 300;
 }#section-homepage5 #section-6 .contact-form button{
     font-family: 'Montserrat';
-    font-size: 19px;
+    font-size: 17px;
     background: #f3ee00;
     color: #0d0f16;
     border: none;
-    padding: 18px 15px;
+    padding: 9px 15px;
     width: 100%;
     max-width: 171px;
     border-radius: 0px;
@@ -5312,6 +5217,8 @@ text-align: center;
 .caracteristicas-mobile{display: none;}
 
 .text-amarillo{color:#F3EE00!important}
+
+.area{width: 80%;}
 /*============================
  *      06. RESPONSIVE       *
  *===========================*/
@@ -5986,6 +5893,7 @@ text-align: center;
 }
 
 @media only screen and ( min-width: 768px ){
+	
 
 	
 	
@@ -6052,6 +5960,10 @@ text-align: center;
 }
 
 @media only screen and ( max-width: 767px ) {
+	.cookie_box_close {
+		line-height: 3.4em;
+		margin-left: 0px;
+	}
 	#section-preloader{display: none;}
 
 	.btn-5, .btn-5:focus {
@@ -6547,7 +6459,7 @@ text-align: center;
 		text-align: center;
 	}
 	.title3 h2 {
-		font-size: 25px;
+		font-size: 24px;
 		text-align: center;
 		margin-bottom: 10px!important;
 	}
